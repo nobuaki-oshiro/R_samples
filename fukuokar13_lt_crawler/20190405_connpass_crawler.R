@@ -31,13 +31,14 @@ for ( n in 1:20 ) {
 }
 
 # 一度ファイル出力
-write.csv(res_df, file = 'output_100.csv')
+write.csv(res_df, file = 'output.csv')
 
 
 # csvアドレスマッチングサービス
 # http://newspat.csis.u-tokyo.ac.jp/geocode-cgi/geocode.cgi?action=start
+# 緯度経度情報を付与したファイル名を'output_add.csv'と変換して読み込ませる
 
-data2 <- read.csv('output_100_add.csv', fileEncoding = "ISO-2022-JP", quote="")
+data2 <- read.csv('output_add.csv', fileEncoding = "ISO-2022-JP", quote="")
 
 # 可視化
 library(leaflet)
